@@ -50,24 +50,10 @@ export default function Content(props) {
                     ? activeColor
                     : textColor
                 }
-
-                //   fontWeight={
-                //   activeRoute(route.path.toLowerCase()) ? "bold" : "normal"
-                // }
               >
                 {route.name}
               </Box>
             </Flex>
-            {/* <Box
-              h="36px"
-              w="4px"
-              bg={
-                activeRoute(route.path.toLowerCase())
-                  ? brandColor
-                  : "transparent"
-              }
-              borderRadius="5px"
-            /> */}
           </HStack>
         </Box>
       </NavLink>
