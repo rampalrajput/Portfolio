@@ -1,6 +1,4 @@
 import { React, useEffect } from "react";
-import routes from "../../routes";
-import Navbar from "../../components/Navbar/Navbar";
 import { Box, useStyleConfig, Flex, Button } from "@chakra-ui/react";
 
 export default function Resume() {
@@ -10,22 +8,14 @@ export default function Resume() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  const getActiveRoute = (routes) => {
-    for (let i = 0; i < routes.length; i++) {
-      if (window.location.href.indexOf(routes[i].path) !== -1) {
-        return routes[i].navbarDisplayName;
-      }
-    }
-  };
-
   const handleDownload = () => {
     window.location.href =
-      "https://drive.google.com/uc?export=download&id=1vAJPgdS7Ka94EdaV3rcTqOk1Ky01_9jC";
+      "https://drive.google.com/uc?export=download&id=1NhlQfZsLWJUR0TiyKirzdzoItLiPGAN5";
   };
 
   return (
     <Box>
-      <Navbar displayText={getActiveRoute(routes)} />
+
       <Box pt={{ base: "40px", md: "80px", xl: "80px" }}>
         <Flex justifyContent="center" alignItems="center">
           <Box
@@ -36,7 +26,7 @@ export default function Resume() {
             borderRadius="md"
           >
             <iframe
-              src="https://drive.google.com/file/d/1vAJPgdS7Ka94EdaV3rcTqOk1Ky01_9jC/preview"
+              src="https://drive.google.com/file/d/1KTi9lYD9U_d5gvC2pmnc9omCJPFDiGvP/preview"
               title="Resume"
               width="100%"
               height="100%"

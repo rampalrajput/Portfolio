@@ -6,8 +6,6 @@ import {
   Text,
   useColorModeValue
 } from "@chakra-ui/react";
-import routes from "../../routes";
-import Navbar from "../../components/Navbar/Navbar";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
 import nftproject from "../../assets/projects/nft_blockchain_500x300.jpg";
 import medhub from "../../assets/projects/medhub_500x300.jpg";
@@ -27,17 +25,10 @@ export default function Projects() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  const getActiveRoute = (routes) => {
-    for (let i = 0; i < routes.length; i++) {
-      if (window.location.href.indexOf(routes[i].path) !== -1) {
-        return routes[i].navbarDisplayName;
-      }
-    }
-  };
 
   return (
     <Box>
-      <Navbar displayText={getActiveRoute(routes)} />
+  
       <Box pt={{ base: "20px", md: "40px", xl: "40px" }}>
         <Flex
           direction="row"

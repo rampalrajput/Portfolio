@@ -7,7 +7,7 @@ import {
   Text,
   useColorModeValue
 } from "@chakra-ui/react";
-import { AiFillGithub, AiFillHeart } from "react-icons/ai";
+import { AiFillGithub  } from "react-icons/ai";
 import { BsInstagram } from "react-icons/bs";
 import { BiLogoLinkedin } from "react-icons/bi";
 import { SiLeetcode } from "react-icons/si";
@@ -47,9 +47,8 @@ export default function Footer() {
         }}
         mb={{ base: "20px", xl: "0px" }}
       >
-        {" "}
-        &copy; {1900 + new Date().getYear()}
-        {"</>"} with <AiFillHeart /> by Rahul Kumar Patro • All Rights Reserved
+      Software Developer : 
+      Rampal Rajput
       </Text>
       <List display="flex">
         <ListItem

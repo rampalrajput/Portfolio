@@ -12,7 +12,6 @@ import routes from "../../routes.js";
 import { SideNavResponsive } from "../Sidenav/Sidenav.js";
 
 export default function Navbar(props) {
-  const { displayText } = props;
   const { colorMode, toggleColorMode } = useColorMode();
   let mainText = useColorModeValue("lightblue.100", "lightpeach.100");
   let navbarPosition = "fixed";
@@ -92,7 +91,7 @@ export default function Navbar(props) {
             // borderBottom="2px solid"
             // borderColor={navbarBorderColor}
           >
-            {displayText}
+            
           </Link>
         </Box>
         <Box>
