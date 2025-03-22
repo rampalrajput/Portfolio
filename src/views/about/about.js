@@ -18,12 +18,8 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import { MdFlightTakeoff } from "react-icons/md";
 import { LiaDrumSolid } from "react-icons/lia";
 import { GiCricketBat } from "react-icons/gi";
-import Navbar from "../../components/Navbar/Navbar";
-import routes from "../../routes";
 import TechStackCard from "../../components/techStackCard/techStackCard";
 import AboutMeInfo from "../../components/aboutMeInfo/aboutMeInfo";
-import angular from "../../assets/icons/angular.svg";
-import typescript from "../../assets/icons/typescript.svg";
 import node from "../../assets/icons/nodejs.svg";
 import mongo from "../../assets/icons/mongodb.svg";
 import js from "../../assets/icons/javascript.svg";
@@ -31,8 +27,6 @@ import react from "../../assets/icons/react.svg";
 import html from "../../assets/icons/html.svg";
 import css from "../../assets/icons/css3.svg";
 import git from "../../assets/icons/git.svg";
-import gitlab from "../../assets/icons/gitlab.svg";
-import cpp from "../../assets/icons/c++.png";
 import express from "../../assets/icons/express.svg";
 import myphoto from "../../assets/aboutMePhoto.jpg";
 import GitHubCalendar from "react-github-calendar";
@@ -52,17 +46,9 @@ export default function About() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  const getActiveRoute = (routes) => {
-    for (let i = 0; i < routes.length; i++) {
-      if (window.location.href.indexOf(routes[i].path) !== -1) {
-        return routes[i].navbarDisplayName;
-      }
-    }
-  };
-
   return (
     <Box>
-      <Navbar displayText={getActiveRoute(routes)} />
+
       <Box pt={{ base: "40px", md: "80px", xl: "80px" }}>
         <Flex
           direction="row"
@@ -139,22 +125,22 @@ export default function About() {
                   <AboutMeInfo
                     boxShadow={cardShadow}
                     title="Current Organization"
-                    value="Truminds Software Systems"
+                    value="ADP Private Limited"
                   />
                   <AboutMeInfo
                     boxShadow={cardShadow}
                     title="Designation"
-                    value="Software Development Engineer - 1"
+                    value="Member technical - Full Stack Developer"
                   />
                   <AboutMeInfo
                     boxShadow={cardShadow}
                     title="Location"
-                    value="Bengaluru, Karnataka"
+                    value="Hyderabad, Telangana"
                   />
                   <AboutMeInfo
                     boxShadow={cardShadow}
                     title="Education"
-                    value="BIT Mesra, Ranchi"
+                    value="M.Tech"
                   />
                   <AboutMeInfo
                     boxShadow={cardShadow}
@@ -164,7 +150,7 @@ export default function About() {
                   <AboutMeInfo
                     boxShadow={cardShadow}
                     title="Languages"
-                    value="English, Hindi, Odia"
+                    value="English, Hindi"
                   />
                 </SimpleGrid>
               </Box>
@@ -189,16 +175,12 @@ export default function About() {
           align={{ base: "center", xl: "center" }}
           justify={{ base: "center", xl: "center" }}
         >
-          <TechStackCard imagepath={angular} />
           <TechStackCard imagepath={react} />
           <TechStackCard imagepath={js} />
-          <TechStackCard imagepath={typescript} />
-          <TechStackCard imagepath={cpp} />
           <TechStackCard imagepath={node} />
-          <TechStackCard imagepath={mongo} />
           <TechStackCard imagepath={express} background="white" />
+          <TechStackCard imagepath={mongo} />
           <TechStackCard imagepath={git} />
-          <TechStackCard imagepath={gitlab} />
           <TechStackCard imagepath={html} />
           <TechStackCard imagepath={css} />
         </SimpleGrid>

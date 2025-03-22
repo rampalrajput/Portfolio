@@ -9,8 +9,6 @@ import {
   Skeleton,
 } from "@chakra-ui/react";
 import "react-lazy-load-image-component/src/effects/blur.css";
-import Navbar from "../../components/Navbar/Navbar";
-import routes from "../../routes";
 import dashboardimg from "../../assets/dashboard.gif";
 import Typewriter from "typewriter-effect";
 import { LazyLoadImage } from "react-lazy-load-image-component";
@@ -18,8 +16,20 @@ import { LazyLoadImage } from "react-lazy-load-image-component";
 export default function Dashboard() {
   const [loadedDashboardimg, setloadedDashboardimg] = useState(false);
   const styles = useStyleConfig("Card");
-  let highlightTextColor = useColorModeValue("lightblue.100", "lightpeach.100");
-  let textColor = useColorModeValue("gray.700", "white");
+  let highlightTextColor = useColorModeValue("lightblack.100");
+  let textColor = useColorModeValue("Black.200", "white");
+  const styles1 = {
+    background: 'linear-gradient(145deg, #ffffff,)',
+    boxShadow: '8px 8px 16pxrgb(247, 234, 234), -8px -8px 16pxrgb(242, 235, 235)',
+    borderRadius: '16px',
+    padding: '24px',
+    fontFamily: '"Poppins", sans-serif',
+    transition: 'transform 0.3s ease-in-out',
+    _hover: {
+      transform: 'scale(1.05)',
+      boxShadow: '10px 10px 20px #d3d3d3, -10px -10px 20px #ffffff',
+    },
+  };
   let quotes = [
     {
       text: "Genius is one percent inspiration and ninety-nine percent perspiration.",
@@ -93,17 +103,8 @@ export default function Dashboard() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  const getActiveRoute = (routes) => {
-    for (let i = 0; i < routes.length; i++) {
-      if (window.location.href.indexOf(routes[i].path) !== -1) {
-        return routes[i].navbarDisplayName;
-      }
-    }
-  };
-
   return (
     <Box>
-      <Navbar displayText={getActiveRoute(routes)} />
       <Box pt={{ base: "60px", md: "80px", xl: "10px" }}>
         <Flex direction="row" justifyContent="center" alignItems="center">
           <Grid
@@ -128,38 +129,21 @@ export default function Dashboard() {
                 justifyContent="center"
                 alignItems="center"
               >
-                <Box __css={styles} border="none">
-                  <Text
-                    fontFamily="Lobster Two"
-                    fontWeight="bold"
-                    color={textColor}
-                  >
-                    Hello Everyone!! 🙋🏻‍♂️
-                  </Text>
-
-                  <Text
-                    fontFamily="Lobster Two"
-                    fontWeight="bold"
-                    color={textColor}
-                    mt="20px"
-                  >
-                    This is{" "}
-                    <Text display="inline-flex" color={highlightTextColor}>
-                      Rahul Kumar Patro
-                    </Text>
-                  </Text>
-                  <Text
-                    fontFamily="Lobster Two"
-                    fontWeight="bold"
-                    color={textColor}
-                    mt="20px"
-                  >
-                    I am a{" "}
-                    <Text display="inline-flex" color={highlightTextColor}>
-                      Software Developer
-                    </Text>
-                  </Text>
-                </Box>
+              <Box __css={styles1} border="none">
+              <h1 style={{ fontSize: '2rem', fontWeight: 'bold', marginBottom: '1rem' }}>
+                Rampal Rajput
+              </h1>
+              <h2 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '1rem', color: '#6b46c1' }}>
+                Software Developer
+              </h2>
+              <div style={{ fontSize: '1rem', lineHeight: '1.6', color: '#4a5568' }}>
+                I am a <strong>Software Developer</strong> with over <strong>2.5 years of experience</strong> specializing in
+                <strong> JavaScript, React.js, Redux, Node.js, Express.js, MySQL,</strong> and <strong>AWS</strong>. My passion lies in building scalable and efficient web applications, crafting seamless user experiences, and solving complex challenges through innovative solutions.
+                <br />
+                <br />
+                I thrive in dynamic environments where I can collaborate with teams to deliver impactful projects and continuously enhance my technical skills. Whether it’s frontend, backend, or full-stack development, I bring a problem-solving mindset and a dedication to excellence in every project I undertake.
+              </div>
+            </Box>
               </Flex>
             </Box>
             <Flex

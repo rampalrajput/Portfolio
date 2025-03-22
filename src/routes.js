@@ -14,6 +14,7 @@ import About from "./views/about/about";
 import Resume from "./views/resume/resume";
 import Projects from "./views/projects/projects";
 import Contact from "./views/contact/contact";
+import WorkExperience from "./views/Experience/workExperience"
 
 const routes = [
   {
@@ -46,6 +47,13 @@ const routes = [
   },
   {
     name: "Contact Me",
+    path: "/contact",
+    navbarDisplayName: "<Contact/>",
+    icon: <Icon as={MdContacts} width="30px" height="30px" color="inherit" />,
+    component: Contact
+  },
+  {
+    name: "Work Experience",
     path: "/contact",
     navbarDisplayName: "<Contact/>",
     icon: <Icon as={MdContacts} width="30px" height="30px" color="inherit" />,

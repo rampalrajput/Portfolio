@@ -10,8 +10,6 @@ import {
   useStyleConfig,
   Skeleton
 } from "@chakra-ui/react";
-import routes from "../../routes";
-import Navbar from "../../components/Navbar/Navbar";
 import contactimg from "../../assets/contact.png";
 import contactimg1 from "../../assets/contact1.png";
 import { AiFillPhone, AiOutlineMail } from "react-icons/ai";
@@ -28,16 +26,10 @@ export default function Contact() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  const getActiveRoute = (routes) => {
-    for (let i = 0; i < routes.length; i++) {
-      if (window.location.href.indexOf(routes[i].path) !== -1) {
-        return routes[i].navbarDisplayName;
-      }
-    }
-  };
+
   return (
     <Box>
-      <Navbar displayText={getActiveRoute(routes)} />
+  
       <Box pt="30px">
         <Flex justifyContent="center" alignItems="center">
           <Box>
@@ -94,7 +86,7 @@ export default function Contact() {
               </Box>
               <Text textAlign="center">FIND ME @</Text>
               <Text color={textColorPrimary} textAlign="center" mt="5px">
-                Truminds Software Systems
+                Bhopal, Madhya Pradesh
               </Text>
             </Box>
           </Flex>
@@ -126,7 +118,7 @@ export default function Contact() {
               <Text textAlign="center">EMAIL ME @</Text>
 
               <Text color={textColorPrimary} textAlign="center" mt="5px">
-                rahulkpatro@gmail.com
+                   rampalrajput97@gmail.com
               </Text>
             </Box>
           </Flex>
@@ -147,7 +139,7 @@ export default function Contact() {
               </Box>
               <Text textAlign="center">CALL ME @</Text>
               <Text color={textColorPrimary} textAlign="center" mt="5px">
-                (+91)-7667232335
+                (+91)-9165302571
               </Text>
             </Box>
           </Flex>
