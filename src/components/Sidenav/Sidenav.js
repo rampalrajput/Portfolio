@@ -21,7 +21,7 @@ import Content from "./Content";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import "./Sidenav.css";
-import sidenavDark from "../../assets/sidenavDark.png";
+import sidenavDark from "../../assets/sidenavDark.png"; 
 import sidenavLight from "../../assets/sidenavLight.png";
 
 export default function Sidenav({ routes }) {
@@ -115,13 +115,13 @@ export function SideNavResponsive({ routes }) {
                 </Stack>
                 <Flex className="github-buttons">
                   <GitHubButton
-                    href="https://github.com/Rahul1582/portfolio-rahulkp"
+                    href="https://github.com/Rahul1582/portfolio-rampal"
                     data-size="large"
                   >
                     Star
                   </GitHubButton>
                   <GitHubButton
-                    href="https://github.com/Rahul1582/portfolio-rahulkp/fork"
+                    href="https://github.com/Rahul1582/portfolio-rampal/fork"
                     data-size="large"
                   >
                     Fork

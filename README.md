@@ -62,7 +62,7 @@ Self Coded Portfolio Website made using React JS and Chakra UI.
 **1. Clone this repo by running the following command :-**
 
 ```bash
- git clone https://github.com/Rahul1582/portfolio-rahulkp.git
+ git clone https://github.com/Rahul1582/portfolio-rampal.git
 ```
 
 **2. Now Install all the required packages by running the following commands :-**
